@@ -5,8 +5,8 @@ interface Props { }
 const Nav: FC<Props> = (props): JSX.Element => {
     return (
         <div className="overflow-hidden flex justify-center gap-2 w-full items-center" id="NavRoot">
-            <img src="https://file.rendit.io/n/B1Z9jBan73xXZ90rgRWE.svg" className="self-start mr-44" id="Layer1" />
-            <div className="flex justify-center gap-6 items-center">
+            <img src="https://file.rendit.io/n/B1Z9jBan73xXZ90rgRWE.svg" className="self-start xl:mr-[10%]" id="Layer1" />
+            <div className="flex mr-[15%] justify-center items-center">
                 <button className="text-sm font-medium leading-6 text-white h-12 px-12 py-3" id="NavButton4-1">Home</button>
                 <button className="text-sm font-medium leading-6 text-white h-12 px-12 py-3" id="Home1">Features</button>
                 <button className="text-sm font-medium leading-6 text-white h-12 px-12 py-3" id="Home2">About Us</button>
