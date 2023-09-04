@@ -1,41 +1,31 @@
+import Image from 'next/image';
 import { FC } from 'react';
 
 interface Props { }
 
-const BenefitItem: FC<{ iconSrc: string, headline: string, description: string }> = ({ iconSrc, headline, description }) => (
-    <div className="relative flex flex-row gap-8 items-start w-[576px]">
-        <div className="bg-[#f9f9f9] flex justify-center items-center w-16 h-16 rounded-full">
-            <img src={iconSrc} className="w-12" alt={headline} />
-        </div>
-        <div className="text-2xl font-['Public_Sans'] font-bold leading-[36px] text-[#222222]">
-            {headline}
-        </div>
-        <div className="font-['Public_Sans'] leading-[28px] text-[#1d2130] absolute top-10 left-24 h-6 w-5/6">
-            {description}
-        </div>
-    </div>
-);
-
 const Benefits: FC<Props> = (): JSX.Element => (
-    <div className="bg-[#fcffff] flex gap-6 justify-center p-[100px] items-center" id="BenifitsRoot">
-        <div className="flex flex-col gap-4 items-start w-[576px]">
-            <div className="font-['Public_Sans'] font-semibold leading-[24px] text-[#222222]">
-                Why should you work with us?
-            </div>
-            <div className="text-5xl font-['Public_Sans'] font-bold leading-[64px] text-[#d80000]">
-                Analyze your sales and marketing leads
-            </div>
-            <p className="font-['Public_Sans'] leading-[28px] text-[#1d2130]">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Lorem.
+    <section className='flex flex-col gap-[83px] justify-center items-center w-full pt-[60px] pr-[100px] pb-[137px] pl-[100px] bg-[#FBFBFB]'>
+        
+        <header className='w-[478px]'>
+            <h2 className="w-full h-[61px] flex-shrink-0 text-[#D80000] text-center font-public-sans text-[48px] font-bold leading-[64px]">
+                About Us
+            </h2>
+            <p className="text-[#5B5B5B] text-center font-public-sans text-[16px] font-semibold leading-[24px]">
+                We accelerate Financial Inclusion
             </p>
+        </header>
+
+        <div className='w-[1284px] flex gap-16'>
+            <div className='relative w-[596px] h-[274px]'>
+                <Image src='/assets/about_us.svg' layout="fill" objectFit="cover" alt='about us' />
+            </div>
+
+            <article className="w-[500px] text-[var(--Primary,#1D2130)] font-public-sans text-[16px] font-normal leading-[28px]">
+                In Arthik we wish to aggregate all the value chain in the financial sector – from Investors to Borrowers which will have a significant economic impact, where every party of the financial ecosystems will be able to take wise & informed borrowing & investment decisions that are substantial. In Arthik, we also offer all the activities which can accelerate financial inclusion or produce more financial activities through digital inclusion, end-to-end solutions to investors, reducing their acquisition cost by generating valid leads with scores and other services which will reduce the current lead time of loan disbursements with the aim to provide digital solutions to ensure real-time loan disbursement. For the borrowers, we offer a single platform to get easy access to all finance products & services as per their requirements at their convenience.
+            </article>
+
         </div>
-        <div className="flex flex-col gap-10 items-start">
-            <BenefitItem iconSrc="https://file.rendit.io/n/H3JGXYEAy1CysQXD5Mmm.svg" headline="Low Charge" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr." />
-            <BenefitItem iconSrc="https://file.rendit.io/n/bm7QGdADsQej6q82k6E9.svg" headline="Fast Transaction" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr." />
-            <BenefitItem iconSrc="https://file.rendit.io/n/1aVIrm8ugldsBRgZROkb.svg" headline="Secure Payment" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr." />
-            <BenefitItem iconSrc="https://file.rendit.io/n/XSxjN3XO0nDP4XGgSEkp.svg" headline="24/7 Support" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr." />
-        </div>
-    </div>
+    </section>
 );
 
 export default Benefits;
